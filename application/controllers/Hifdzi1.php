@@ -150,53 +150,6 @@ class Hifdzi1 extends CI_CONTROLLER{
             shuffle($mufrodat);
 
             $data['mufrodat'] = $mufrodat;
-            // if($hal == "2"){
-            //     $kata = $this->searchForHal("1", $mufrodat, "0", "5");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-
-            //     $kata = $this->searchForHal("2", $mufrodat, "5", "5");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-            // } else if($hal == "3"){
-            //     $kata = $this->searchForHal("1", $mufrodat, "0", "3");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-
-            //     $kata = $this->searchForHal("2", $mufrodat, "3", "3");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-
-            //     $kata = $this->searchForHal("3", $mufrodat, "6", "4");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-
-            // } else if($hal == "4"){
-            //     $kata = $this->searchForHal("1", $mufrodat, "0", "2");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-
-            //     $kata = $this->searchForHal("2", $mufrodat, "2", "2");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-
-            //     $kata = $this->searchForHal("3", $mufrodat, "4", "3");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-
-            //     $kata = $this->searchForHal("4", $mufrodat, "7", "3");
-            //     foreach ($kata as $kata) {
-            //         $data['mufrodat'][] = $kata;
-            //     }
-            // }
             
             // view
                 foreach ($data['mufrodat'] as $i => $kata) {

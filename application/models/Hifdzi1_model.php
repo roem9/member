@@ -58,10 +58,16 @@
 
         public function materi_pertemuan($id){
             $data[1] = [
-                "0" => "<img src='".base_url()."assets/img/hifdzi_1/1.1.png' class='img-rounded img-fluid'>",
+                "0" => "<img src='".base_url()."assets/img/hifdzi_1/1.1.jpg' class='img-rounded img-fluid'>",
                 "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/1.1.mp4' type='audio/mp4'></audio>",  
-                "2" => "<img src='".base_url()."assets/img/hifdzi_1/1.2.png' class='img-rounded img-fluid'>",  
+                "2" => "<img src='".base_url()."assets/img/hifdzi_1/1.2.jpg' class='img-rounded img-fluid'>",  
                 "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/1.2.mp4' type='audio/mp4'></audio>",
+            ];
+            $data[2] = [
+                "0" => "<img src='".base_url()."assets/img/hifdzi_1/2.1.jpg' class='img-rounded img-fluid'>",
+                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.1.mp4' type='audio/mp4'></audio>",  
+                "2" => "<img src='".base_url()."assets/img/hifdzi_1/2.2.jpg' class='img-rounded img-fluid'>",  
+                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.2.mp4' type='audio/mp4'></audio>",
             ];
        
             return $data[$id];
