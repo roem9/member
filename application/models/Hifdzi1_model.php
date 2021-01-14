@@ -63,13 +63,22 @@
                 "2" => "<img src='".base_url()."assets/img/hifdzi_1/1.2.jpg' class='img-rounded img-fluid'>",  
                 "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/1.2.mp4' type='audio/mp4'></audio>",
             ];
+
             $data[2] = [
                 "0" => "<img src='".base_url()."assets/img/hifdzi_1/2.1.jpg' class='img-rounded img-fluid'>",
                 "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.1.mp4' type='audio/mp4'></audio>",  
                 "2" => "<img src='".base_url()."assets/img/hifdzi_1/2.2.jpg' class='img-rounded img-fluid'>",  
                 "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/2.2.mp4' type='audio/mp4'></audio>",
             ];
+
+            $data[3] = [
+                "0" => "<img src='".base_url()."assets/img/hifdzi_1/3.1.jpg' class='img-rounded img-fluid'>",
+                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.1.mp4' type='audio/mp4'></audio>",  
+                "2" => "<img src='".base_url()."assets/img/hifdzi_1/3.2.jpg' class='img-rounded img-fluid'>",  
+                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.2.mp4' type='audio/mp4'></audio>",
+            ];
        
+
             return $data[$id];
         }
 
