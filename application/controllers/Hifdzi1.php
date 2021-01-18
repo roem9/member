@@ -8,14 +8,14 @@ class Hifdzi1 extends CI_CONTROLLER{
         ini_set('xdebug.var_display_max_depth', '10');
         ini_set('xdebug.var_display_max_children', '256');
         ini_set('xdebug.var_display_max_data', '1024');
-        if($this->session->userdata('status') != "login"){
+        if(!$this->session->userdata('id_user')){
             $this->session->set_flashdata('login', 'Maaf, Anda harus login terlebih dahulu');
-            redirect(base_url("login"));
+            redirect(base_url("auth"));
         }
     }
 
     public function kelas($id_kelas){
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         $data['kelas'] = $this->Admin_model->get_one("kelas", ["MD5(id_kelas)" => $id_kelas]);
         $data['link'] = $id_kelas;
@@ -952,7 +952,7 @@ class Hifdzi1 extends CI_CONTROLLER{
     }
 
     public function syahadah($id_kelas){
-        $id = $this->session->userdata('id');
+        $id = $this->session->userdata('id_user');
         $kelas = $this->Admin_model->get_one("kelas_user", ["MD5(id)" => $id_kelas, "id_user" => $id]);
 
         $data['peserta'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
@@ -1073,7 +1073,7 @@ class Hifdzi1 extends CI_CONTROLLER{
     
     // add
         public function add_latihan(){
-            $id = $this->session->userdata('id');
+            $id = $this->session->userdata('id_user');
             $redirect = $this->input->post("redirect", TRUE);
             $latihan = $this->input->post("latihan", TRUE);
             $id_kelas = $this->input->post("id_kelas", TRUE);

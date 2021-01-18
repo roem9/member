@@ -77,6 +77,13 @@
                 "2" => "<img src='".base_url()."assets/img/hifdzi_1/3.2.jpg' class='img-rounded img-fluid'>",  
                 "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/3.2.mp4' type='audio/mp4'></audio>",
             ];
+            
+            $data[4] = [
+                "0" => "<img src='".base_url()."assets/img/hifdzi_1/4.1.jpg' class='img-rounded img-fluid'>",
+                "1" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/4.1.mp4' type='audio/mp4'></audio>",  
+                "2" => "<img src='".base_url()."assets/img/hifdzi_1/4.2.jpg' class='img-rounded img-fluid'>",  
+                "3" => "<audio controls><source src='".base_url()."assets/sound/hifdzi_1/4.2.mp4' type='audio/mp4'></audio>",
+            ];
        
 
             return $data[$id];

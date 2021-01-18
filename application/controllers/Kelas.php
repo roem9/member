@@ -4,14 +4,14 @@ class Kelas extends CI_CONTROLLER{
         parent::__construct();
         $this->load->model('Arab_model');
         $this->load->model('Admin_model');
-        if($this->session->userdata('status') != "login"){
+        if(!$this->session->userdata('id_user')){
             $this->session->set_flashdata('login', 'Maaf, Anda harus login terlebih dahulu');
-            redirect(base_url("login"));
+            redirect(base_url("auth"));
         }
     }
 
     public function index(){
-        $id = $this->session->userdata("id");
+        $id = $this->session->userdata('id_user');
         $data['title'] = "List Kelas";
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         
@@ -39,7 +39,7 @@ class Kelas extends CI_CONTROLLER{
     }
 
     public function ajax_list(){
-        $id = $this->session->userdata("id");
+        $id = $this->session->userdata('id_user');
         $data['kelas'] = [];
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         $kelas = $this->Admin_model->get_all("kelas_user", ["id_user" => $id, "id_kelas <>" => NULL]);
@@ -62,7 +62,7 @@ class Kelas extends CI_CONTROLLER{
     }
 
     public function ajax_one(){
-        $id = $this->session->userdata("id");
+        $id = $this->session->userdata('id_user');
         $id_kelas = $_GET['id_kelas'];
         $data['user'] = $this->Admin_model->get_one("user", ["id_user" => $id]);
         $data['kelas'] = $this->Admin_model->get_one("kelas", ["MD5(id_kelas)" => $id_kelas]);
@@ -123,7 +123,7 @@ class Kelas extends CI_CONTROLLER{
 
     // get 
         public function get_detail_kelas(){
-            $id_user = $this->session->userdata("id");
+            $id_user = $this->session->userdata('id_user');
             $id = $this->input->post("id");
             $data = $this->Admin_model->get_one("kelas", ["id_kelas" => $id]);
             $data['pertemuan'] = $this->Admin_model->get_all("materi_kelas", ["id_kelas" => $id], "id");
@@ -206,7 +206,7 @@ class Kelas extends CI_CONTROLLER{
 
     // add 
         public function add_hadir(){
-            $id_user = $this->session->userdata("id");
+            $id_user = $this->session->userdata('id_user');
             $data = [
                 "id_kelas" => $this->input->post("id_kelas"),
                 "pertemuan" => $this->input->post("pertemuan"),
