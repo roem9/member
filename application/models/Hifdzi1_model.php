@@ -52,7 +52,20 @@
                 ["id" => "1","kata" => "فَوْقَ","kata_arab" => "فَوْقَ","arti" => "Di atas","hal" => "1","huruf" => array_unique($this->huruf("فَوْقَ"))],
                 ["id" => "1","kata" => "تَحْتَ","kata_arab" => "تَحْتَ","arti" => "Di bawah","hal" => "1","huruf" => array_unique($this->huruf("تَحْتَ"))],
             ];
-            
+
+            $data[5] = [
+                ["id" => "1","kata" => "مَا","kata_arab" => "مَا","arti" => "Apa","hal" => "1","huruf" => array_unique($this->huruf("مَا"))],
+                ["id" => "1","kata" => "مَنْ","kata_arab" => "مَنْ","arti" => "Siapa","hal" => "1","huruf" => array_unique($this->huruf("مَنْ"))],
+                ["id" => "1","kata" => "مَاذَا","kata_arab" => "مَاذَا","arti" => "Apa yang","hal" => "1","huruf" => array_unique($this->huruf("مَاذَا"))],
+                ["id" => "1","kata" => "مِمَّ","kata_arab" => "مِمَّ","arti" => "Dari apa","hal" => "1","huruf" => array_unique($this->huruf("مِمَّ"))],
+                ["id" => "1","kata" => "بِمَاذَا","kata_arab" => "بِمَاذَا","arti" => "Dengan apa","hal" => "1","huruf" => array_unique($this->huruf("بِمَاذَا"))],
+                ["id" => "1","kata" => "لِأَيِّ شَيْئٍ","kata_arab" => "لِأَيِّ شَيْئٍ","arti" => "Untuk apa","hal" => "1","huruf" => array_unique($this->huruf("لِأَيِّ شَيْئٍ"))],
+                ["id" => "1","kata" => "مَعَ مَنْ","kata_arab" => "مَعَ مَنْ","arti" => "Bersama siapa","hal" => "1","huruf" => array_unique($this->huruf("مَعَ مَنْ"))],
+                ["id" => "1","kata" => "لِمَنْ","kata_arab" => "لِمَنْ","arti" => "Untuk siapa","hal" => "1","huruf" => array_unique($this->huruf("لِمَنْ"))],
+                ["id" => "1","kata" => "أَيْنَ","kata_arab" => "أَيْنَ","arti" => "Dimana","hal" => "1","huruf" => array_unique($this->huruf("أَيْنَ"))],
+                ["id" => "1","kata" => "إِلَى أَيْنَ","kata_arab" => "إِلَى أَيْنَ","arti" => "Kemana","hal" => "1","huruf" => array_unique($this->huruf("إِلَى أَيْنَ"))],
+            ];
+
             return $data[$id];
         }
 
